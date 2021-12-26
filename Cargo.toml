@@ -17,6 +17,7 @@ members = [
     "lib/ringbuf",
 
     "app/demo-stm32f4-discovery",
+    "app/demo-stm32f4-nucleo",
     "app/demo-stm32h7-nucleo",
     "app/gemini-bu",
     "app/gemini-bu-rot",

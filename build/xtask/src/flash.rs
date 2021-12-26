@@ -76,13 +76,15 @@ pub fn run(verbose: bool, cfg: &Path) -> anyhow::Result<()> {
 
             (flash, Some(reset))
         }
-        "stm32f3-discovery" | "stm32f4-discovery" | "nucleo-h743zi2"
-        | "nucleo-h753zi" | "stm32h7b3i-dk" | "gemini-bu-1" | "gimletlet-2"
-        | "gimlet-1" => {
+        "stm32f3-discovery" | "stm32f4-discovery" | "nucleo-f446re"
+        | "nucleo-h743zi2" | "nucleo-h753zi" | "stm32h7b3i-dk" | "gemini-bu-1"
+        | "gimletlet-2" | "gimlet-1" => {
             let cfg = if toml.board == "stm32f3-discovery" {
                 "./app/demo-stm32f4-discovery/openocd-f3.cfg"
             } else if toml.board == "stm32f4-discovery" {
                 "./app/demo-stm32f4-discovery/openocd.cfg"
+            } else if toml.board == "nucleo-f446re" {
+                "./app/demo-stm32f4-nucleo/openocd.cfg"
             } else if toml.board == "gemini-bu-1" {
                 "./app/gemini-bu/openocd.cfg"
             } else if toml.board == "gimletlet-2" {

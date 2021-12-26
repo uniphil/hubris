@@ -466,6 +466,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "demo-stm32f4-nucleo"
+version = "0.1.0"
+dependencies = [
+ "build-util",
+ "cortex-m",
+ "cortex-m-rt",
+ "kern",
+ "panic-halt",
+ "panic-itm",
+ "panic-semihosting",
+ "stm32f4",
+]
+
+[[package]]
 name = "demo-stm32h7-nucleo"
 version = "0.1.0"
 dependencies = [
